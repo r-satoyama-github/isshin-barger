@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Isshin Barger">
+  <meta name="theme-color" content="#e63b2e">
+  <title>Isshin Barger レジ</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== スタート画面 ========== -->
+  <section id="start" class="screen">
+    <div class="start-box">
+      <div class="logo-big">
+        <span class="logo-burger">🍔</span>
+        <h1 class="shop-name" data-shop-name>Isshin Barger</h1>
+        <p class="catch" data-shop-catch></p>
+      </div>
+      <button id="btn-open" class="btn btn-open">🔑 おみせを ひらく</button>
+    </div>
+  </section>
+
+  <!-- ========== 共通ヘッダー ========== -->
+  <header id="header" class="header" hidden>
+    <div class="logo-small"><span>🍔</span><b data-shop-name>Isshin Barger</b></div>
+    <div class="phrases">
+      <button class="btn phrase" data-say="いらっしゃいませ！">👋 いらっしゃいませ</button>
+      <button class="btn phrase" data-say="ごちゅうもんは、なにに しますか？">❓ ごちゅうもんは？</button>
+      <button class="btn phrase" data-say="しょうしょう おまちください。">⏳ おまちください</button>
+    </div>
+    <div class="order-no">ばんごう <b id="header-no">1</b></div>
+    <button id="btn-gear" class="btn gear" aria-label="せってい（ながおし）">⚙️</button>
+  </header>
+
+  <!-- ========== レジ画面 ========== -->
+  <section id="register" class="screen" hidden>
+    <div class="menu-pane">
+      <nav id="tabs" class="tabs"></nav>
+      <div id="items" class="items"></div>
+    </div>
+    <aside class="tray">
+      <h2 class="tray-title">🧾 ちゅうもん</h2>
+      <ul id="cart" class="cart"></ul>
+      <div class="total-box">
+        <span>ごうけい</span>
+        <b id="cart-total">0</b>
+        <span>えん</span>
+      </div>
+      <div class="tray-actions">
+        <button id="btn-clear" class="btn btn-sub btn-clear" aria-label="やりなおし">🗑️<small>けす</small></button>
+        <button id="btn-checkout" class="btn btn-main" disabled>💰 おかいけい</button>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ========== おかいけい画面 ========== -->
+  <section id="checkout" class="screen" hidden>
+    <div class="pay-left">
+      <div class="pay-head">
+        <button id="btn-back" class="btn btn-sub">◀ もどる</button>
+        <div class="eat-toggle" id="eat-toggle">
+          <button class="btn eat" data-eat="in">🪑 おみせで たべる</button>
+          <button class="btn eat" data-eat="out">🛍️ おもちかえり</button>
+        </div>
+      </div>
+      <div class="pay-total">ごうけい <b id="pay-total">0</b> えん</div>
+      <div class="recv-line">おあずかり <b id="recv-sum">0</b> えん</div>
+      <div id="money-tray" class="money-tray" aria-label="うけとった おかね"></div>
+      <div id="pay-status" class="pay-status"></div>
+      <div id="change-coins" class="change-coins"></div>
+    </div>
+    <div class="pay-right">
+      <p class="pay-hint">もらった おかねを タッチ！ 👇</p>
+      <div id="money-buttons" class="money-buttons"></div>
+      <div class="pay-actions">
+        <button id="btn-undo-money" class="btn btn-sub">↩️ ひとつ もどす</button>
+        <button id="btn-complete" class="btn btn-main" disabled>✨ おかいけい かんりょう</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== レシート画面 ========== -->
+  <section id="receipt" class="screen" hidden>
+    <div class="receipt-wrap">
+      <div id="paper" class="paper"></div>
+    </div>
+    <div class="receipt-side">
+      <p class="wait-label">おまちの ばんごう</p>
+      <div id="rc-no" class="big-number">1</div>
+      <button id="btn-next" class="btn btn-main btn-next">😊 つぎの おきゃくさま ▶</button>
+    </div>
+  </section>
+
+  <!-- ========== ポップアップ ========== -->
+  <div id="modal" class="modal" hidden>
+    <div id="modal-box" class="modal-box"></div>
+  </div>
+
+  <div id="fx-layer" class="fx-layer" aria-hidden="true"></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="110" fill="#ffc93c"/>
+  <!-- 上のパン -->
+  <path d="M96 236c0-92 72-148 160-148s160 56 160 148z" fill="#f2a03d"/>
+  <g fill="#fff6e5">
+    <ellipse cx="190" cy="150" rx="12" ry="7" transform="rotate(-20 190 150)"/>
+    <ellipse cx="256" cy="130" rx="12" ry="7"/>
+    <ellipse cx="322" cy="150" rx="12" ry="7" transform="rotate(20 322 150)"/>
+    <ellipse cx="220" cy="196" rx="12" ry="7"/>
+    <ellipse cx="296" cy="196" rx="12" ry="7"/>
+  </g>
+  <!-- レタス -->
+  <path d="M84 246h344l-20 22-24-14-24 16-24-16-24 16-24-16-24 16-24-16-24 16-24-16-24 16-24-16-24 14z" fill="#3cb371"/>
+  <!-- チーズ -->
+  <path d="M92 266h328l-40 40-30-24H92z" fill="#ffd84a"/>
+  <!-- パティ -->
+  <rect x="88" y="282" width="336" height="52" rx="26" fill="#7a4325"/>
+  <!-- 下のパン -->
+  <path d="M100 346h312v22c0 24-20 44-44 44H144c-24 0-44-20-44-44z" fill="#f2a03d"/>
+  <!-- にっこり -->
+  <circle cx="214" cy="176" r="0"/>
+  <path d="M226 226q30 22 60 0" stroke="#7a4325" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <circle cx="214" cy="206" r="10" fill="#7a4325"/>
+  <circle cx="298" cy="206" r="10" fill="#7a4325"/>
+</svg>
